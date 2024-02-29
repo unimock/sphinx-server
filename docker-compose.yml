@@ -1,0 +1,15 @@
+version: '3'
+services:
+  sphinx:
+    ##################################################
+    # BUILD section
+    ##################################################
+    build:
+      context: .
+      dockerfile: Dockerfile
+      x-bake:
+        platforms:
+          - linux/amd64
+          - linux/arm64
+    image: unimock/sphinx-server-docker:0.0.0
+
